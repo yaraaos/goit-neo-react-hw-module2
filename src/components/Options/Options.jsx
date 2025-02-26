@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import css from "./Options.module.css";
 
 const Options = ({ options, updateFeedback, totalFeedback, handleReset }) => {

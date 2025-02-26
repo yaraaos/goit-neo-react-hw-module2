@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import css from "./Feedback.module.css";
 
 const Feedback = ({ scores, totalFeedback, percent }) => {

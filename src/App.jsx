@@ -17,11 +17,6 @@ function App() {
     return savedFeedback ? JSON.parse(savedFeedback) : scores;
   });
 
-  // eslint-disable-next-line no-undef
-  useEffect(() => {
-    window.localStorage.setItem("saved-feedback", JSON.stringify(feedback));
-  }, [feedback]);
-
   const updateFeedback = (feedbackType) => {
     setFeedback({
       ...feedback,
