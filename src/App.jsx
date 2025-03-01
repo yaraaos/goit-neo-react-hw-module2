@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Description from "./components/Description/Description";
 import Options from "./components/Options/Options";
@@ -16,6 +16,10 @@ function App() {
     const savedFeedback = window.localStorage.getItem("saved-feedback");
     return savedFeedback ? JSON.parse(savedFeedback) : scores;
   });
+
+  useEffect(() => {
+    window.localStorage.setItem("saved-feedback", JSON.stringify(feedback));
+  }, [feedback]);
 
   const updateFeedback = (feedbackType) => {
     setFeedback({
